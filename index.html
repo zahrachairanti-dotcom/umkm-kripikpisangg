@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keripik Pisang Zahra</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#home">
+            🍌 Keripik Pisang Zahra
+        </a>
+
+        <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#home">Beranda</a></li>
+                <li class="nav-item"><a class="nav-link" href="#tentang">Tentang</a></li>
+                <li class="nav-item"><a class="nav-link" href="#produk">Produk</a></li>
+                <li class="nav-item"><a class="nav-link" href="#galeri">Galeri</a></li>
+                <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- BERANDA -->
+<section id="home" class="hero">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <div class="col-md-6 hero-text">
+                <span class="hiasan">🍌 Camilan Lezat dan Renyah 🍌</span>
+
+                <h1>Keripik Pisang <span>Zahra</span></h1>
+
+                <p>
+                    Nikmati keripik pisang yang renyah, gurih,
+                    dan lezat dengan pilihan rasa Original dan Balado.
+                </p>
+
+                <a href="#produk" class="btn btn-pink">Lihat Produk</a>
+            </div>
+
+            <div class="col-md-6 text-center">
+                <div class="logo-frame">
+                    <img src="assets/logo.png" alt="Logo Keripik Pisang Zahra">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- TENTANG -->
+<section id="tentang" class="section">
+    <div class="container text-center">
+        <h2 class="judul">Tentang Kami</h2>
+        <div class="garis"></div>
+
+        <p class="tentang-text">
+            Keripik Pisang Zahra merupakan usaha makanan ringan
+            yang menyediakan keripik pisang dengan rasa Original
+            dan Balado. Kami menghadirkan camilan yang cocok
+            dinikmati bersama keluarga dan teman.
+        </p>
+    </div>
+</section>
+
+<!-- PRODUK -->
+<section id="produk" class="section produk-section">
+    <div class="container">
+        <h2 class="judul text-center">Produk Kami</h2>
+        <div class="garis"></div>
+
+        <div class="row justify-content-center g-4">
+
+            <div class="col-md-5 col-lg-4">
+                <div class="product-card">
+
+                    <div class="product-image">
+                        <img src="assets/produk1.png"
+                             alt="Keripik Pisang Original">
+                    </div>
+
+                    <div class="product-info">
+                        <h3>Keripik Pisang Original</h3>
+                        <p>
+                            Rasa original yang gurih, renyah,
+                            dan nikmat untuk menemani waktu santai.
+                        </p>
+
+                        <a href="https://wa.me/6282161770324"
+                           class="btn btn-pink" target="_blank">
+                            Pesan Sekarang
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-5 col-lg-4">
+                <div class="product-card">
+
+                    <div class="product-image">
+                        <img src="assets/produk2.png"
+                             alt="Keripik Pisang Balado">
+                    </div>
+
+                    <div class="product-info">
+                        <h3>Keripik Pisang Balado</h3>
+                        <p>
+                            Perpaduan rasa pedas dan gurih
+                            yang cocok untuk pencinta rasa balado.
+                        </p>
+
+                        <a href="https://wa.me/6282161770324"
+                           class="btn btn-pink" target="_blank">
+                            Pesan Sekarang
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- GALERI -->
+<section id="galeri" class="section">
+    <div class="container">
+        <h2 class="judul text-center">Galeri Foto Bersama</h2>
+        <div class="garis"></div>
+
+        <div class="row justify-content-center g-4">
+
+            <div class="col-6 col-md-5 col-lg-4">
+                <div class="gallery-card"
+                     onclick="bukaFoto('assets/galeri1.jpg')">
+                    <img src="assets/galeri1.jpg" alt="Galeri foto bersama 1">
+                </div>
+            </div>
+
+            <div class="col-6 col-md-5 col-lg-4">
+                <div class="gallery-card"
+                     onclick="bukaFoto('assets/galeri2.jpg')">
+                    <img src="assets/galeri2.jpg" alt="Galeri foto bersama 2">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox" onclick="tutupFoto()">
+    <span class="tutup">&times;</span>
+    <img id="fotoBesar" src="" alt="Foto diperbesar">
+</div>
+
+<!-- KONTAK -->
+<section id="kontak" class="section kontak-section">
+    <div class="container text-center">
+        <h2 class="judul">Hubungi Kami</h2>
+        <div class="garis"></div>
+
+        <div class="kontak-box">
+            <p><strong>Nama Pemilik:</strong> Zahra Chairanti</p>
+            <p><strong>Alamat:</strong> Bandar Betsy</p>
+            <p><strong>WhatsApp:</strong> 082161770324</p>
+
+            <a href="https://wa.me/6282161770324"
+               class="btn btn-pink mt-2" target="_blank">
+                Hubungi WhatsApp
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>🍌 Keripik Pisang Zahra 🍌</p>
+    <p>© 2026 Keripik Pisang Zahra. Semua Hak Dilindungi.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
