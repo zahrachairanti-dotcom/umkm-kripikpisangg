@@ -1,1 +1,437 @@
+/* =================================
+   TEMA PINK KERIPIK PISANG ZAHRA
+================================= */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #fff0f6;
+    color: #713c55;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+.navbar {
+    background: linear-gradient(90deg, #d63384, #f58ab7, #ec6da5);
+    box-shadow: 0 4px 15px rgba(180, 45, 110, 0.2);
+}
+
+.navbar-brand {
+    color: white !important;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.nav-link {
+    color: white !important;
+    font-weight: bold;
+    margin-left: 10px;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #ffe4ef !important;
+    transform: translateY(-3px);
+}
+
+/* BERANDA */
+.hero {
+    min-height: 100vh;
+    padding: 130px 0 70px;
+    display: flex;
+    align-items: center;
+    background:
+        radial-gradient(circle at 10% 20%, #ffffff 0 5%, transparent 6%),
+        radial-gradient(circle at 90% 80%, #ffc4dc 0 7%, transparent 8%),
+        linear-gradient(135deg, #ffe0ed, #ffb8d3, #fff0f6);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "🌸";
+    position: absolute;
+    top: 18%;
+    left: 5%;
+    font-size: 35px;
+    animation: melayang 3s infinite;
+}
+
+.hero::after {
+    content: "✨";
+    position: absolute;
+    bottom: 15%;
+    right: 7%;
+    font-size: 40px;
+    animation: berputar 5s infinite linear;
+}
+
+.hero-text {
+    animation: masukKiri 1s ease;
+}
+
+.hiasan {
+    color: #c92d72;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.hero h1 {
+    color: #a83269;
+    font-size: clamp(32px, 5vw, 55px);
+    font-weight: bold;
+    margin: 18px 0;
+}
+
+.hero h1 span {
+    color: #e75491;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #713c55;
+}
+
+/* LOGO */
+.logo-frame {
+    width: 260px;
+    height: 260px;
+    max-width: 80%;
+    margin: 20px auto;
+    padding: 12px;
+    background: white;
+    border: 5px solid #f58ab7;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(201, 76, 128, 0.25);
+    animation: melayang 3s ease-in-out infinite;
+    overflow: hidden;
+}
+
+.logo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* TOMBOL */
+.btn-pink {
+    background: linear-gradient(90deg, #d63384, #f58ab7);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    box-shadow: 0 5px 15px rgba(201, 76, 128, 0.2);
+    transition: 0.3s;
+}
+
+.btn-pink:hover {
+    background: #b9236a;
+    color: white;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(201, 76, 128, 0.3);
+}
+
+/* SEMUA SECTION */
+.section {
+    padding: 80px 0;
+    position: relative;
+}
+
+.judul {
+    color: #c92d72;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.garis {
+    width: 85px;
+    height: 5px;
+    background: linear-gradient(90deg, #d63384, #ffb8d3);
+    margin: 15px auto 35px;
+    border-radius: 20px;
+}
+
+.tentang-text {
+    max-width: 750px;
+    margin: auto;
+    font-size: 17px;
+    line-height: 1.9;
+    background: white;
+    padding: 25px;
+    border: 2px solid #ffc0d8;
+    border-radius: 20px;
+    box-shadow: 0 5px 18px rgba(201, 76, 128, 0.1);
+}
+
+/* SECTION PRODUK */
+.produk-section {
+    background: linear-gradient(135deg, #ffe0ed, #fff5f9);
+}
+
+.product-card {
+    height: 100%;
+    padding: 15px;
+    background: white;
+    border: 2px solid #f5a4c5;
+    border-radius: 22px;
+    box-shadow: 0 6px 20px rgba(201, 76, 128, 0.15);
+    transition: 0.4s;
+    animation: muncul 1s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(201, 76, 128, 0.25);
+}
+
+/* BINGKAI PRODUK MENGIKUTI FOTO */
+.product-image {
+    width: 100%;
+    min-height: 180px;
+    padding: 10px;
+    background: #fff0f6;
+    border: 3px solid #f5a4c5;
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* FOTO PRODUK UTUH */
+.product-image img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 10px;
+}
+
+/* TULISAN PRODUK */
+.product-info {
+    text-align: center;
+    padding: 20px 8px 10px;
+}
+
+.product-info h3 {
+    color: #c92d72;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.product-info p {
+    color: #713c55;
+    line-height: 1.7;
+}
+
+/* GALERI */
+#galeri {
+    background: #fff0f6;
+}
+
+.gallery-card {
+    width: 100%;
+    padding: 10px;
+    background: white;
+    border: 3px solid #f5a4c5;
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(201, 76, 128, 0.15);
+    transition: 0.3s;
+}
+
+.gallery-card:hover {
+    border-color: #d63384;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(201, 76, 128, 0.2);
+}
+
+/* FOTO GALERI TIDAK DIPOTONG */
+.gallery-card img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 10px;
+}
+
+/* LIGHTBOX */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    background: rgba(65, 15, 40, 0.92);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.lightbox.aktif {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 85vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    background: white;
+    border: 5px solid #f58ab7;
+    border-radius: 15px;
+}
+
+.tutup {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    color: white;
+    font-size: 45px;
+    cursor: pointer;
+}
+
+/* KONTAK */
+.kontak-section {
+    background: linear-gradient(135deg, #ffe0ed, #ffc4dc);
+}
+
+.kontak-box {
+    max-width: 500px;
+    margin: auto;
+    padding: 30px;
+    background: white;
+    border: 3px solid #f5a4c5;
+    border-radius: 22px;
+    box-shadow: 0 8px 25px rgba(201, 76, 128, 0.15);
+}
+
+.kontak-box p {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+/* FOOTER */
+footer {
+    background: linear-gradient(90deg, #c92d72, #e75491);
+    color: white;
+    text-align: center;
+    padding: 25px 10px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+/* ANIMASI */
+@keyframes melayang {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@keyframes masukKiri {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes muncul {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes berputar {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* RESPONSIVE HP */
+@media (max-width: 768px) {
+    .hero {
+        text-align: center;
+        padding-top: 110px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .logo-frame {
+        width: 220px;
+        height: 220px;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .judul {
+        font-size: 27px;
+    }
+
+    .product-image img,
+    .gallery-card img {
+        max-height: 350px;
+    }
+}
+
+@media (max-width: 380px) {
+    .logo-frame {
+        width: 190px;
+        height: 190px;
+    }
+
+    .product-info h3 {
+        font-size: 18px;
+    }
+
+    .product-image img,
+    .gallery-card img {
+        max-height: 300px;
+    }
+}
